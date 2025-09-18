@@ -99,14 +99,19 @@ def main():
 	# Step 4: Calculate target labels to replace with prefix.
 	print('Step-4: Calculating Search&Replace Targets')
 	for _, l in enumerate(_PARAMS.get('--add-label', [])):
-		_BISON_LABELS.append(l)
-		_LEX_LABELS.append(l)
+		if (l not in _BISON_LABELS):
+			_BISON_LABELS.append(l)
+
+		if (l not in _LEX_LABELS):
+			_LEX_LABELS.append(l)
 
 	for _, l in enumerate(_PARAMS.get('--add-bison-label', [])):
-		_BISON_LABELS.append(l)
+		if (l not in _BISON_LABELS):
+			_BISON_LABELS.append(l)
 
 	for _, l in enumerate(_PARAMS.get('--add-lex-label', [])):
-		_LEX_LABELS.append(l)
+		if (l not in _LEX_LABELS):
+			_LEX_LABELS.append(l)
 
 	for _, l in enumerate(_PARAMS.get('--ignore-label', [])):
 		try:
