@@ -44,7 +44,7 @@ value
     ;
 
 object
-    : JSON_TOK_Curly0 JSON_TOK_Ws JSON_TOK_Curly1
+    : JSON_TOK_Curly0 ws JSON_TOK_Curly1
     | JSON_TOK_Curly0 members JSON_TOK_Curly1
     ;
 
@@ -54,11 +54,11 @@ members
     ;
 
 member
-    : JSON_TOK_Ws JSON_TOK_String JSON_TOK_Ws JSON_TOK_Semicolon element
+    : ws JSON_TOK_String ws JSON_TOK_Semicolon element
     ;
 
 array
-    : JSON_TOK_Bracket0 JSON_TOK_Ws JSON_TOK_Bracket1
+    : JSON_TOK_Bracket0 ws JSON_TOK_Bracket1
     | JSON_TOK_Bracket0 elements JSON_TOK_Bracket1
     ;
 
@@ -68,7 +68,12 @@ elements
     ;
 
 element
-    : JSON_TOK_Ws value JSON_TOK_Ws
+    : ws value ws
+    ;
+
+ws
+    : %empty
+    | JSON_TOK_Ws
     ;
 
 %%

@@ -49,12 +49,11 @@ int main(int argc, char* argv[]) {
 	yylex_init(&scanner);
 
 	buffer = yy_scan_bytes(fdata, flen, scanner);
-	printf("Result: %d\n", yyparse(scanner));
-	// if (yyparse(scanner) == 0) {
-	// 	printf("Yes this is a json file!\n");
-	// } else {
-	// 	printf("Not a json file...\n");
-	// }
+	if (yyparse(scanner) == 0) {
+		printf("Yes this is a json file!\n");
+	} else {
+		printf("Not a json file...\n");
+	}
 
 	yy_delete_buffer(buffer, scanner);
 	yylex_destroy(scanner);

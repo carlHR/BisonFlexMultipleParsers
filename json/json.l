@@ -48,7 +48,7 @@ JSONLex_Ws [ \t\n\r]
 {JSONLex_Curly1} {printf("Curly1\n"); return JSON_TOK_Curly1;}
 {JSONLex_String} {printf("String\n"); return JSON_TOK_String;}
 {JSONLex_Number} {printf("Number\n"); return JSON_TOK_Number;}
-{JSONLex_Ws}* {printf("Ws\n"); return JSON_TOK_Ws;}
+{JSONLex_Ws}+ {printf("Ws\n"); return JSON_TOK_Ws;}
 <*>.|\n {printf("Error... Default rule\n");}
 
 %%

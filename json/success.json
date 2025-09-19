@@ -1,1 +1,6 @@
- 1 
+{
+	"1": [-2E+2, 3.5e+10, "abc"],
+	"bool": true,
+	"false": false,
+	"none": [null, null]
+}
