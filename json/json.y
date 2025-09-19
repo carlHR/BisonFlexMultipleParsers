@@ -9,6 +9,7 @@
 	typedef void* yyscan_t;
 }
 %code {
+    // Source for json's syntax: https://www.json.org/json-en.html
 	int yylex(YYSTYPE* yylvalp, YYLTYPE* yyllocp, yyscan_t scanner);
 	void yyerror(YYLTYPE* yyllocp, yyscan_t unused, const char* msg);
 }
