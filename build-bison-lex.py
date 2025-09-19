@@ -3,9 +3,6 @@ import sys
 import os
 import re
 
-# Compiling Eval:
-# python build-bison-lex.py --set-prefix "eval" --output-dir "eval" --bison-file "eval/eval.y" --lex-file "eval/eval.l"
-
 # Flags:
 #  --bison-app-src <src>
 #  --lex-app-src <src>
