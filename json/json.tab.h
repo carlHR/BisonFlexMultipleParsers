@@ -35,8 +35,8 @@
    especially those whose name start with YY_ or yy_.  They are
    private implementation details that can be changed or removed.  */
 
-#ifndef YY_YY_EVAL_TAB_H_INCLUDED
-# define YY_YY_EVAL_TAB_H_INCLUDED
+#ifndef YY_YY_JSON_TAB_H_INCLUDED
+# define YY_YY_JSON_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -45,11 +45,11 @@
 extern int yydebug;
 #endif
 /* "%code requires" blocks.  */
-#line 8 "./eval.y"
+#line 8 "./json.y"
 
-  typedef void* yyscan_t;
+	typedef void* yyscan_t;
 
-#line 53 "eval.tab.h"
+#line 53 "json.tab.h"
 
 /* Token kinds.  */
 #ifndef YYTOKENTYPE
@@ -60,8 +60,18 @@ extern int yydebug;
     YYEOF = 0,                     /* "end of file"  */
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
-    NUMBER = 258,                  /* NUMBER  */
-    UNOP = 259                     /* UNOP  */
+    JSON_TOK_Comma = 258,          /* JSON_TOK_Comma  */
+    JSON_TOK_Semicolon = 259,      /* JSON_TOK_Semicolon  */
+    JSON_TOK_True = 260,           /* JSON_TOK_True  */
+    JSON_TOK_False = 261,          /* JSON_TOK_False  */
+    JSON_TOK_Null = 262,           /* JSON_TOK_Null  */
+    JSON_TOK_Bracket0 = 263,       /* JSON_TOK_Bracket0  */
+    JSON_TOK_Bracket1 = 264,       /* JSON_TOK_Bracket1  */
+    JSON_TOK_Curly0 = 265,         /* JSON_TOK_Curly0  */
+    JSON_TOK_Curly1 = 266,         /* JSON_TOK_Curly1  */
+    JSON_TOK_String = 267,         /* JSON_TOK_String  */
+    JSON_TOK_Number = 268,         /* JSON_TOK_Number  */
+    JSON_TOK_Ws = 269              /* JSON_TOK_Ws  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -93,4 +103,4 @@ struct YYLTYPE
 int yyparse (yyscan_t scanner);
 
 
-#endif /* !YY_YY_EVAL_TAB_H_INCLUDED  */
+#endif /* !YY_YY_JSON_TAB_H_INCLUDED  */

@@ -7,6 +7,12 @@
   static int yydebug;
 #endif
 
+/*
+  Original Example from this SO answer: https://stackoverflow.com/a/48879103/14956120
+  Anything inside this folder can be executed by running the batch file on windows (msys2)
+  then executing app.exe
+*/
+
 int main(int argc, char* argv[]) {
   yyscan_t scanner;          
   yylex_init(&scanner);

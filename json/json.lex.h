@@ -2,9 +2,9 @@
 #define yyHEADER_H 1
 #define yyIN_HEADER 1
 
-#line 5 "eval.lex.h"
+#line 5 "json.lex.h"
 
-#line 7 "eval.lex.h"
+#line 7 "json.lex.h"
 
 #define  YY_INT_ALIGNED short int
 
@@ -237,6 +237,8 @@ YY_BUFFER_STATE yy_scan_bytes ( const char *bytes, int len , yyscan_t yyscanner 
 void *yyalloc ( yy_size_t , yyscan_t yyscanner );
 void *yyrealloc ( void *, yy_size_t , yyscan_t yyscanner );
 void yyfree ( void * , yyscan_t yyscanner );
+
+/* Begin user sect3 */
 
 #define yywrap(yyscanner) (/*CONSTCOND*/1)
 #define YY_SKIP_YYWRAP
@@ -516,8 +518,9 @@ extern int yylex \
 #undef yyTABLES_NAME
 #endif
 
-#line 27 "./eval.l"
+#line 54 "./json.l"
 
-#line 521 "eval.lex.h"
+
+#line 524 "json.lex.h"
 #undef yyIN_HEADER
 #endif /* yyHEADER_H */

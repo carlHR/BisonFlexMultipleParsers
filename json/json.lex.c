@@ -1,6 +1,6 @@
-#line 1 "eval.lex.c"
+#line 1 "json.lex.c"
 
-#line 3 "eval.lex.c"
+#line 3 "json.lex.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -358,6 +358,8 @@ void yyfree ( void * , yyscan_t yyscanner );
 	}
 #define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
 
+/* Begin user sect3 */
+
 #define yywrap(yyscanner) (/*CONSTCOND*/1)
 #define YY_SKIP_YYWRAP
 typedef flex_uint8_t YY_CHAR;
@@ -380,8 +382,8 @@ static void yynoreturn yy_fatal_error ( const char* msg , yyscan_t yyscanner );
 	yyg->yy_hold_char = *yy_cp; \
 	*yy_cp = '\0'; \
 	yyg->yy_c_buf_p = yy_cp;
-#define YY_NUM_RULES 5
-#define YY_END_OF_BUFFER 6
+#define YY_NUM_RULES 14
+#define YY_END_OF_BUFFER 15
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -389,28 +391,31 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[12] =
+static const flex_int16_t yy_accept[46] =
     {   0,
-        0,    0,    6,    4,    1,    2,    3,    1,    2,    3,
-        0
+       12,   12,   15,   13,   12,   13,    1,   13,   11,   11,
+        2,    6,    7,   13,   13,   13,    8,    9,   12,    0,
+       10,    0,   11,   11,    0,    0,   11,    0,    0,    0,
+        0,   11,    0,   11,    0,    0,    0,    0,    0,    5,
+        3,    0,    4,    0,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
+        1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    2,    1,    4,    1,    1,    1,    1,    1,    1,
+        1,    1,    5,    6,    7,    8,    9,   10,   11,   11,
+       11,   11,   11,   11,   11,   11,   11,   12,    1,    1,
+        1,    1,    1,    1,   13,   13,   13,   13,   14,   13,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    4,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+       15,   16,   17,    1,    1,    1,   18,   19,   13,   13,
 
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+       20,   21,    1,    1,    1,    1,    1,   22,    1,   23,
+        1,    1,    1,   24,   25,   26,   27,    1,    1,    1,
+        1,    1,   28,    1,   29,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -427,39 +432,69 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[6] =
+static const YY_CHAR yy_meta[30] =
     {   0,
-        1,    2,    3,    1,    4
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
+        2,    1,    2,    2,    1,    1,    1,    2,    2,    2,
+        2,    1,    1,    1,    1,    1,    1,    1,    1
     } ;
 
-static const flex_int16_t yy_base[15] =
+static const flex_int16_t yy_base[51] =
     {   0,
-        0,    0,   11,   12,    0,    0,    0,    0,    0,    0,
-       12,    8,    5,    4
+        0,    0,   90,   91,   28,   28,   91,   23,   27,   40,
+       91,   91,   91,   71,   61,   63,   91,   91,   34,   36,
+       91,   57,   35,    0,   28,   52,    0,   60,   57,   50,
+        0,   54,   35,   59,   50,   50,   51,    0,   47,   91,
+       91,    0,   91,    0,   91,   84,   56,   54,   51,   40
     } ;
 
-static const flex_int16_t yy_def[15] =
+static const flex_int16_t yy_def[51] =
     {   0,
-       11,    1,   11,   11,   12,   13,   14,   12,   13,   14,
-        0,   11,   11,   11
+       45,    1,   45,   45,   45,   46,   45,   45,   45,   45,
+       45,   45,   45,   45,   45,   45,   45,   45,   45,   46,
+       45,   45,   45,   10,   45,   45,   10,   45,   45,   45,
+       47,   45,   45,   45,   45,   45,   45,   48,   45,   45,
+       45,   49,   45,   50,    0,   45,   45,   45,   45,   45
     } ;
 
-static const flex_int16_t yy_nxt[18] =
+static const flex_int16_t yy_nxt[121] =
     {   0,
-        4,    5,    4,    6,    7,    9,    9,   10,    9,    8,
-       11,    3,   11,   11,   11,   11,   11
+        4,    5,    5,    6,    4,    7,    8,    4,    4,    9,
+       10,   11,    4,    4,   12,    4,   13,    4,    4,    4,
+       14,    4,   15,    4,    4,   16,    4,   17,   18,   19,
+       19,   21,   23,   24,   25,   19,   19,   32,   32,   21,
+       26,   20,   25,   22,   34,   34,   26,   25,   26,   27,
+       27,   22,   44,   26,   26,   42,   33,   38,   33,   26,
+       20,   34,   34,   32,   32,   20,   43,   26,   34,   34,
+       41,   40,   20,   26,   39,   20,   37,   20,   36,   20,
+       20,   35,   20,   31,   20,   20,   30,   29,   28,   45,
+        3,   45,   45,   45,   45,   45,   45,   45,   45,   45,
+
+       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
+       45,   45,   45,   45,   45,   45,   45,   45,   45,   45
     } ;
 
-static const flex_int16_t yy_chk[18] =
+static const flex_int16_t yy_chk[121] =
     {   0,
-        1,    1,    1,    1,    1,   13,   13,   14,   13,   12,
-        3,   11,   11,   11,   11,   11,   11
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    5,
+        5,    6,    8,    8,    9,   19,   19,   25,   25,   20,
+        9,   50,   23,    6,   33,   33,    9,   10,   23,   10,
+       10,   20,   49,   10,   23,   48,   26,   47,   26,   10,
+       22,   26,   26,   32,   32,   22,   39,   32,   34,   34,
+       37,   36,   22,   32,   35,   22,   30,   22,   29,   22,
+       22,   28,   22,   22,   46,   46,   16,   15,   14,    3,
+       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
+
+       45,   45,   45,   45,   45,   45,   45,   45,   45,   45,
+       45,   45,   45,   45,   45,   45,   45,   45,   45,   45
     } ;
 
 /* Table of booleans, true if rule could match eol. */
-static const flex_int32_t yy_rule_can_match_eol[6] =
+static const flex_int32_t yy_rule_can_match_eol[15] =
     {   0,
-0, 0, 0, 1, 0,     };
+0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0,     };
 
 /* The intent behind this definition is that it'll catch
  * any uses of REJECT which flex missed.
@@ -468,24 +503,24 @@ static const flex_int32_t yy_rule_can_match_eol[6] =
 #define yymore() yymore_used_but_not_detected
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
-#line 1 "./eval.l"
+#line 1 "./json.l"
 #define YY_NO_INPUT 1
-#line 6 "./eval.l"
-  #include <stdlib.h>                                                           
-  #include <string.h>
-  #include "eval.tab.h"                                                   
-  
-  #define YY_USER_ACTION                                             \
-    yylloc->first_line = yylloc->last_line;                          \
-    yylloc->first_column = yylloc->last_column;                      \
-    if (yylloc->last_line == yylineno)                               \
-      yylloc->last_column += yyleng;                                 \
-    else {                                                           \
-      yylloc->last_line = yylineno;                                  \
-      yylloc->last_column = yytext + yyleng - strrchr(yytext, '\n'); \
-    }
-#line 487 "eval.lex.c"
-#line 488 "eval.lex.c"
+#line 6 "./json.l"
+	#include <stdlib.h> 
+	#include <string.h>
+	#include "json.tab.h" 
+	
+	#define YY_USER_ACTION                                             \
+	yylloc->first_line = yylloc->last_line;                            \
+	yylloc->first_column = yylloc->last_column;                        \
+	if (yylloc->last_line == yylineno)                                 \
+		yylloc->last_column += yyleng;                                 \
+	else {                                                             \
+		yylloc->last_line = yylineno;                                  \
+		yylloc->last_column = yytext + yyleng - strrchr(yytext, '\n'); \
+	}
+#line 522 "json.lex.c"
+#line 523 "json.lex.c"
 
 #define INITIAL 0
 
@@ -767,9 +802,9 @@ YY_DECL
 		}
 
 	{
-#line 20 "./eval.l"
+#line 39 "./json.l"
 
-#line 772 "eval.lex.c"
+#line 807 "json.lex.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -796,13 +831,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 12 )
+				if ( yy_current_state >= 46 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 12 );
+		while ( yy_base[yy_current_state] != 91 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -840,31 +875,78 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "./eval.l"
-;                                                  
+#line 40 "./json.l"
+{printf("Comma\n"); return JSON_TOK_Comma;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "./eval.l"
-;                                                  
+#line 41 "./json.l"
+{printf("Semicolon\n"); return JSON_TOK_Semicolon;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 24 "./eval.l"
-*yylval = strtol(yytext, NULL, 0); return NUMBER;  
+#line 42 "./json.l"
+{printf("True\n"); return JSON_TOK_True;}
 	YY_BREAK
 case 4:
-/* rule 4 can match eol */
 YY_RULE_SETUP
-#line 26 "./eval.l"
-return *yytext;
+#line 43 "./json.l"
+{printf("False\n"); return JSON_TOK_False;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 27 "./eval.l"
+#line 44 "./json.l"
+{printf("Null\n"); return JSON_TOK_Null;}
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 45 "./json.l"
+{printf("Bracket0\n"); return JSON_TOK_Bracket0;}
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 46 "./json.l"
+{printf("Bracket1\n"); return JSON_TOK_Bracket1;}
+	YY_BREAK
+case 8:
+YY_RULE_SETUP
+#line 47 "./json.l"
+{printf("Curly0\n"); return JSON_TOK_Curly0;}
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 48 "./json.l"
+{printf("Curly1\n"); return JSON_TOK_Curly1;}
+	YY_BREAK
+case 10:
+/* rule 10 can match eol */
+YY_RULE_SETUP
+#line 49 "./json.l"
+{printf("String\n"); return JSON_TOK_String;}
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 50 "./json.l"
+{printf("Number\n"); return JSON_TOK_Number;}
+	YY_BREAK
+case 12:
+/* rule 12 can match eol */
+YY_RULE_SETUP
+#line 51 "./json.l"
+{printf("Ws\n"); return JSON_TOK_Ws;}
+	YY_BREAK
+case 13:
+/* rule 13 can match eol */
+YY_RULE_SETUP
+#line 52 "./json.l"
+{printf("Error... Default rule\n");}
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 54 "./json.l"
 YY_FATAL_ERROR( "flex scanner jammed" );
 	YY_BREAK
-#line 867 "eval.lex.c"
+#line 949 "json.lex.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1163,7 +1245,7 @@ static int yy_get_next_buffer (yyscan_t yyscanner)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 12 )
+			if ( yy_current_state >= 46 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1192,11 +1274,11 @@ static int yy_get_next_buffer (yyscan_t yyscanner)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 12 )
+		if ( yy_current_state >= 46 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 11);
+	yy_is_jam = (yy_current_state == 45);
 
 	(void)yyg;
 	return yy_is_jam ? 0 : yy_current_state;
@@ -2026,4 +2108,6 @@ void yyfree (void * ptr , yyscan_t yyscanner)
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "./eval.l"
+#line 54 "./json.l"
+
+
