@@ -96,14 +96,18 @@ def main():
 		print('Step-2: Bison')
 	bison_c_file = os.path.abspath(os.path.join(param('--output-dir'), param('--set-prefix')) + '.tab.c')
 	bison_h_file = os.path.abspath(os.path.join(param('--output-dir'), param('--set-prefix')) + '.tab.h')
-	subprocess.getoutput([param('--bison-app-src'), '-o', bison_c_file, ('--defines=%s' % bison_h_file), param('--bison-file')])
+	x = subprocess.getoutput([param('--bison-app-src'), '-o', bison_c_file, ('--defines=%s' % bison_h_file), param('--bison-file')])
+	if (x != '' and not silent):
+		print(x)
 
 	# Step 3: Execute lex
 	if (not silent):
 		print('Step-3: Lex')
 	lex_c_file = os.path.abspath(os.path.join(param('--output-dir'), param('--set-prefix')) + '.lex.c')
 	lex_h_file = os.path.abspath(os.path.join(param('--output-dir'), param('--set-prefix')) + '.lex.h')
-	subprocess.getoutput([param('--lex-app-src'), '-o', lex_c_file, ('--header-file=%s' % lex_h_file), param('--lex-file')])
+	x = subprocess.getoutput([param('--lex-app-src'), '-o', lex_c_file, ('--header-file=%s' % lex_h_file), param('--lex-file')])
+	if (x != '' and not silent):
+		print(x)
 
 	if (not silent):
 		print('bison_c_file: ', bison_c_file)
